@@ -1,0 +1,28 @@
+{
+  "root": "apps/zenny-ui-e2e",
+  "sourceRoot": "apps/zenny-ui-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/zenny-ui-e2e/cypress.json",
+        "devServerTarget": "zenny-ui:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "zenny-ui:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/zenny-ui-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["zenny-ui"]
+}
