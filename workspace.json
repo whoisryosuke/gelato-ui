@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "components": "libs/components",
     "zenny-ui": "apps/zenny-ui",
     "zenny-ui-e2e": "apps/zenny-ui-e2e"
   }
