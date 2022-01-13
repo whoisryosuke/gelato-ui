@@ -1,4 +1,5 @@
 const rootMain = require('../../../.storybook/main');
+const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
 
 module.exports = {
   ...rootMain,
@@ -18,6 +19,7 @@ module.exports = {
     }
 
     // add your own webpack tweaks if needed
+    config.plugins = [...config.plugins, new VanillaExtractPlugin()];
 
     return config;
   },
