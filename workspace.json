@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "components": "libs/components",
+    "components-e2e": "apps/components-e2e",
     "zenny-ui": "apps/zenny-ui",
     "zenny-ui-e2e": "apps/zenny-ui-e2e"
   }
