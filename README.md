@@ -10,6 +10,24 @@ Creates a `<Button>` component in `libs/components`.
 nx g @nrwl/react:component button --project=components --export
 ```
 
+Then you can generate any missing Storybook tests using:
+
+```
+nx g @nrwl/react:stories --project=components
+```
+
+### Creating Utilities
+
+Utilities are anything that isn't a component - like pure TS/JS. These are helper functions, data constants, etc.
+
+1. Create new folder inside library - anywhere is ok: `libs/components/src/libs/your-utility/`
+2. Add your files.
+3. Make sure to export anything in the root `index.ts` that needs to be exposed to user via NPM module.
+
+> We currently do not having tests auto generated for utilities, but they should be available through the Nx Jest setup.
+
+---
+
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>

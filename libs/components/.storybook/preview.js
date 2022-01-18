@@ -1,10 +1,10 @@
 import React from 'react';
-import { lightTheme } from '../src/lib/theme';
+import { ThemeProvider } from '../src/lib/theme-provider';
 
 export const decorators = [
   (Story) => (
-    <div className={lightTheme}>
+    <ThemeProvider>
       <Story />
-    </div>
+    </ThemeProvider>
   ),
 ];
