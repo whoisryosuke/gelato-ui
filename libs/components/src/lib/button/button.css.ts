@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
-import { lightVars } from '../theme';
+import { light } from '../theme';
 
 export const buttonStyles = style({
   display: 'flex',
-  backgroundColor: lightVars.colors.primary,
+  backgroundColor: light.tokens.colors.primary,
 });

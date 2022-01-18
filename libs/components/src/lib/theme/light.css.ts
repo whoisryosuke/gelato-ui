@@ -23,7 +23,12 @@ export const gradients = {
   blue: `linear-gradient(180deg, #00D2FF 0%, ${colors.secondary} 100%)`,
 };
 
-export const [themeClass, vars] = createTheme({
+const [themeClass, vars] = createTheme({
   colors,
   gradients,
 });
+
+export const light = {
+  class: themeClass,
+  tokens: vars,
+};

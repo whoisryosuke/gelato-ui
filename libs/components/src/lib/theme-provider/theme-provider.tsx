@@ -1,7 +1,6 @@
-import styled from 'styled-components';
 import { ThemeContext, ThemeNames } from '../context/theme';
 import { useState } from 'react';
-import { lightTheme } from '../theme';
+import { light, base } from '../theme';
 
 /* eslint-disable-next-line */
 export interface ThemeProviderProps {}
@@ -15,7 +14,7 @@ export function ThemeProvider({
     setSelectedTheme((prevValue) => (prevValue === 'light' ? 'dark' : 'light'));
   };
 
-  const colorMode = selectedTheme === 'light' ? lightTheme : lightTheme;
+  const colorMode = selectedTheme === 'light' ? light.class : light.class;
   return (
     <ThemeContext.Provider
       value={{
@@ -23,7 +22,7 @@ export function ThemeProvider({
         toggleTheme,
       }}
     >
-      <div className={colorMode}>{children}</div>
+      <div className={`${base.class} ${colorMode}`}>{children}</div>
     </ThemeContext.Provider>
   );
 }

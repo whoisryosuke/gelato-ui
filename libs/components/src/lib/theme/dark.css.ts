@@ -1,5 +1,5 @@
 import { createTheme } from '@vanilla-extract/css';
-import { vars } from './light.css';
+import { light } from './light.css';
 
 // export const [darkTheme, darkVars] = createTheme(vars, {
 //   color: {

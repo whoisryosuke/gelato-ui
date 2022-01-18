@@ -1,3 +1,4 @@
-import { themeClass as lightTheme, vars as lightVars } from './light.css';
+import { light } from './light.css';
+import { base } from './base.css';
 
-export { lightTheme, lightVars };
+export { light, base };
