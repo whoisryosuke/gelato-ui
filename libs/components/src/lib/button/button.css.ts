@@ -3,5 +3,5 @@ import { lightVars } from '../theme';
 
 export const buttonStyles = style({
   display: 'flex',
-  backgroundColor: lightVars.colors.background,
+  backgroundColor: lightVars.colors.primary,
 });
