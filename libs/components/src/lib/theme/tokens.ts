@@ -10,6 +10,16 @@ export const BREAKPOINTS = {
   desktop: '1200px',
   widescreen: '1920px',
 };
+export const MEDIA_QUERIES: Record<
+  string,
+  Record<string, string>
+> = Object.entries(BREAKPOINTS).reduce(
+  (mergeObj, [key, value]) => ({
+    ...mergeObj,
+    [key]: { '@media': `screen and (min-width: ${value})` },
+  }),
+  {}
+);
 
 export const FONTS = {
   body: 'Roboto, Helvetiva Neue, Helvetica, Aria, sans-serif',
