@@ -1,4 +1,5 @@
 import { createTheme } from '@vanilla-extract/css';
+import { colorTokens } from './colormode.css';
 
 export const colors = {
   text: '#111212',
@@ -23,12 +24,7 @@ export const gradients = {
   blue: `linear-gradient(180deg, #00D2FF 0%, ${colors.secondary} 100%)`,
 };
 
-const [themeClass, vars] = createTheme({
+export const light = createTheme(colorTokens, {
   colors,
   gradients,
 });
-
-export const light = {
-  class: themeClass,
-  tokens: vars,
-};

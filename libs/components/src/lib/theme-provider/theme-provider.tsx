@@ -1,6 +1,6 @@
 import { ThemeContext, ThemeNames } from '../context/theme';
 import { useState } from 'react';
-import { light, base } from '../theme';
+import { themes, base } from '../theme';
 
 /* eslint-disable-next-line */
 export interface ThemeProviderProps {}
@@ -14,7 +14,7 @@ export function ThemeProvider({
     setSelectedTheme((prevValue) => (prevValue === 'light' ? 'dark' : 'light'));
   };
 
-  const colorMode = selectedTheme === 'light' ? light.class : light.class;
+  const colorMode = selectedTheme === 'light' ? themes.light : themes.light;
   return (
     <ThemeContext.Provider
       value={{
