@@ -10,15 +10,14 @@ export const BREAKPOINTS = {
   desktop: '1200px',
   widescreen: '1920px',
 };
-export const MEDIA_QUERIES: Record<
-  string,
-  Record<string, string>
-> = Object.entries(BREAKPOINTS).reduce(
+type MediaQueries = Record<keyof typeof BREAKPOINTS, Record<string, string>>;
+// Generates media queries formatted for Vanilla Extract
+export const MEDIA_QUERIES: MediaQueries = Object.entries(BREAKPOINTS).reduce(
   (mergeObj, [key, value]) => ({
     ...mergeObj,
     [key]: { '@media': `screen and (min-width: ${value})` },
   }),
-  {}
+  {} as MediaQueries
 );
 
 export const FONTS = {
@@ -27,22 +26,27 @@ export const FONTS = {
   monospace: 'Menlo, monospace',
 };
 
-export const FONT_SIZES = [12, 14, 16, 20, 24, 32, 48, 64, 96];
-// Generates an object with keys starting from 0 - <array length>
-// Also can convert values from number to pixel using param flag
-const createAscendingProperties = (
-  arrayProps: number[],
-  convertToPx = false
-): Record<number, string> => {
-  return arrayProps.reduce(
-    (mergeObj, currValue, index) => ({
-      ...mergeObj,
-      [index]: convertToPx ? `${currValue}px` : currValue,
-    }),
-    {}
-  );
+export const FONT_SIZE_PROPERTIES = {
+  0: '12px',
+  1: '14px',
+  2: '16px',
+  3: '20px',
+  4: '24px',
+  5: '32px',
+  6: '48px',
+  7: '64px',
+  8: '96px',
 };
-export const FONT_SIZE_PROPERTIES = createAscendingProperties(FONT_SIZES, true);
 
-export const SPACE = [0, 4, 8, 16, 32, 64, 128, 256, 512];
-export const SPACE_PROPERTIES = createAscendingProperties(SPACE, true);
+// export const SPACE = [0, 4, 8, 16, 32, 64, 128, 256, 512];
+export const SPACE_PROPERTIES = {
+  0: '0px',
+  1: '4px',
+  2: '8px',
+  3: '16px',
+  4: '32px',
+  5: '64px',
+  6: '128px',
+  7: '256px',
+  8: '512px',
+};

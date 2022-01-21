@@ -3,7 +3,6 @@ import {
   layoutUtilityStyles,
 } from '../utility-styles/utility-styles.css';
 
-/* eslint-disable-next-line */
 export type BoxProps = LayoutUtilityStyles & {
   m?: LayoutUtilityStyles['margin'];
   mt?: LayoutUtilityStyles['marginTop'];
