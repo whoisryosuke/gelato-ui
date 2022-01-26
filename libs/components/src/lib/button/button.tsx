@@ -1,4 +1,5 @@
-import { buttonStyles, sizeVariants } from './button.css';
+import { buttonStyles } from './button.css';
+import { sizeVariants } from '../variants/size.css';
 import clsx from 'clsx';
 
 /* eslint-disable-next-line */
