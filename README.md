@@ -1,4 +1,4 @@
-# ZennyUi
+# Gelato UI
 
 ## Development
 
