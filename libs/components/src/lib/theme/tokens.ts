@@ -40,13 +40,17 @@ export const FONT_SIZE_PROPERTIES = {
 
 // export const SPACE = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 export const SPACE_PROPERTIES = {
-  0: '0px',
+  0: '2px',
   1: '4px',
   2: '8px',
   3: '16px',
-  4: '32px',
-  5: '64px',
-  6: '128px',
-  7: '256px',
-  8: '512px',
+  4: '24px',
+  5: '32px',
+  6: '48px',
+  7: '64px',
+  8: '96px',
+  9: '128px',
+  10: '192px',
+  11: '256px',
+  12: '512px',
 };
