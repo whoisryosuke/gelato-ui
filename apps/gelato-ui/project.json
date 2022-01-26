@@ -1,6 +1,6 @@
 {
-  "root": "apps/zenny-ui",
-  "sourceRoot": "apps/zenny-ui/src",
+  "root": "apps/gelato-ui",
+  "sourceRoot": "apps/gelato-ui/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,13 +9,16 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/zenny-ui",
-        "index": "apps/zenny-ui/src/index.html",
+        "outputPath": "dist/apps/gelato-ui",
+        "index": "apps/gelato-ui/src/index.html",
         "baseHref": "/",
-        "main": "apps/zenny-ui/src/main.tsx",
-        "polyfills": "apps/zenny-ui/src/polyfills.ts",
-        "tsConfig": "apps/zenny-ui/tsconfig.app.json",
-        "assets": ["apps/zenny-ui/src/favicon.ico", "apps/zenny-ui/src/assets"],
+        "main": "apps/gelato-ui/src/main.tsx",
+        "polyfills": "apps/gelato-ui/src/polyfills.ts",
+        "tsConfig": "apps/gelato-ui/tsconfig.app.json",
+        "assets": [
+          "apps/gelato-ui/src/favicon.ico",
+          "apps/gelato-ui/src/assets"
+        ],
         "styles": [],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
@@ -24,8 +27,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/zenny-ui/src/environments/environment.ts",
-              "with": "apps/zenny-ui/src/environments/environment.prod.ts"
+              "replace": "apps/gelato-ui/src/environments/environment.ts",
+              "with": "apps/gelato-ui/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -40,12 +43,12 @@
     "serve": {
       "executor": "@nrwl/web:dev-server",
       "options": {
-        "buildTarget": "zenny-ui:build",
+        "buildTarget": "gelato-ui:build",
         "hmr": true
       },
       "configurations": {
         "production": {
-          "buildTarget": "zenny-ui:build:production",
+          "buildTarget": "gelato-ui:build:production",
           "hmr": false
         }
       }
@@ -54,14 +57,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/zenny-ui/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/gelato-ui/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/zenny-ui"],
+      "outputs": ["coverage/apps/gelato-ui"],
       "options": {
-        "jestConfig": "apps/zenny-ui/jest.config.js",
+        "jestConfig": "apps/gelato-ui/jest.config.js",
         "passWithNoTests": true
       }
     }

@@ -3,7 +3,7 @@
   "projects": {
     "components": "libs/components",
     "components-e2e": "apps/components-e2e",
-    "zenny-ui": "apps/zenny-ui",
-    "zenny-ui-e2e": "apps/zenny-ui-e2e"
+    "gelato-ui": "apps/gelato-ui",
+    "gelato-ui-e2e": "apps/gelato-ui-e2e"
   }
 }

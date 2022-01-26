@@ -3,7 +3,7 @@ import NxWelcome from './nx-welcome';
 export function App() {
   return (
     <div>
-      <NxWelcome title="zenny-ui" />
+      <NxWelcome title="gelato-ui" />
     </div>
   );
 }

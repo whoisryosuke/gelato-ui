@@ -1,17 +1,17 @@
 {
-  "root": "apps/zenny-ui-e2e",
-  "sourceRoot": "apps/zenny-ui-e2e/src",
+  "root": "apps/gelato-ui-e2e",
+  "sourceRoot": "apps/gelato-ui-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/zenny-ui-e2e/cypress.json",
-        "devServerTarget": "zenny-ui:serve"
+        "cypressConfig": "apps/gelato-ui-e2e/cypress.json",
+        "devServerTarget": "gelato-ui:serve"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "zenny-ui:serve:production"
+          "devServerTarget": "gelato-ui:serve:production"
         }
       }
     },
@@ -19,10 +19,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/zenny-ui-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/gelato-ui-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["zenny-ui"]
+  "implicitDependencies": ["gelato-ui"]
 }

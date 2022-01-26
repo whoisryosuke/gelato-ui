@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'zenny-ui',
+  displayName: 'gelato-ui',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +11,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/apps/zenny-ui',
+  coverageDirectory: '../../coverage/apps/gelato-ui',
 };

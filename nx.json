@@ -1,5 +1,5 @@
 {
-  "npmScope": "zenny-ui",
+  "npmScope": "gelato-ui",
   "affected": {
     "defaultBase": "main"
   },
@@ -47,5 +47,5 @@
       }
     }
   },
-  "defaultProject": "zenny-ui"
+  "defaultProject": "gelato-ui"
 }
