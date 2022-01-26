@@ -8,12 +8,24 @@ The focus is on extensibility through utility props, and customization through s
 
 ## Development
 
+This project uses:
+
+- Nx to manage the monorepo
+- Storybook for visual development
+- Jest for testing (+ React Testing Library for components)
+- Cypress for E2E tests
+- Webpack for bundling apps, libraries, etc
+
 ### Storybook
 
 1. Run `yarn storybook:start` to spin up the Storybook development server.
 2. Your browser should open with: http://localhost:4400/
 
-### Creating Components
+### Generate a library
+
+Run `nx g @nrwl/react:lib my-lib` to generate a library. These are stored in the `/libs/` folder. They can be imported using `@gelato-ui/mylib` from any other library or app (`/apps/`).
+
+### Generating Components
 
 Creates a `<Button>` component in `libs/components`.
 
@@ -27,13 +39,9 @@ Then you can generate any missing Storybook tests using:
 nx g @nrwl/react:stories --project=components
 ```
 
-### Generate a library
+### Creating utilities
 
-Libraries are anything that isn't a component - like pure TS/JS. These are helper functions, data constants, etc. They can be imported from `@gelato-ui/mylib`.
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-_or manually:_
+Utilites are anything that isn't a component - like pure TS/JS. These are helper functions, data constants, etc.
 
 1. Create new folder inside library - anywhere is ok: `libs/components/src/libs/your-utility/`
 2. Add your files.
