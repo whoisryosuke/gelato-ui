@@ -7,6 +7,7 @@
     "storybook:start": "nx run components:storybook",
     "storybook:build": "nx run components:build-storybook",
     "build": "nx build",
+    "build:components": "nx run components:build",
     "test": "nx test"
   },
   "private": true,
@@ -49,6 +50,7 @@
     "@types/react-is": "17.0.2",
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
+    "@vanilla-extract/rollup-plugin": "^1.1.0",
     "babel-jest": "27.2.3",
     "babel-loader": "8.1.0",
     "cypress": "^9.1.0",
